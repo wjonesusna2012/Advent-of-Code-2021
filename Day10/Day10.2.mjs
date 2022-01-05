@@ -44,7 +44,6 @@ linesRead.forEach(line => {
   const result = checkLineForErrors(line);
   if (result[0] === 'NO ERROR') {
     const charStack = result[1];
-    console.log(charStack);
     while(charStack.length > 0) {
       const res = charStack.pop();
       completionScore *= 5;
@@ -54,5 +53,4 @@ linesRead.forEach(line => {
   }
 });
 scores.sort((a, b) => a - b);
-console.log(scores);
 console.log(scores[Math.floor(scores.length / 2)]);
